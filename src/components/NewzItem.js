@@ -1,0 +1,38 @@
+import React, { Component } from 'react'
+import { Link } from 'react-router-dom';
+// import PropTypes from 'prop-types'
+
+export class NewzItem extends Component {
+
+  //   static propTypes = {
+
+  //   }
+
+  render() {
+    let { title, desc, imgUrl, newsUrl, date, author } = this.props;
+    return (
+      <div className="card my-2 mx-auto" style={{ width: '20rem' }}>
+        <span class="position-absolute top-0 translate-middle badge rounded-pill bg-success" style={{left
+        :'100%'}}>
+{author}
+  </span>
+        <img src={imgUrl} className="card-img-top" style={{ height: '10em' }} alt="..." />
+        <div className="card-body">
+          <h5 className="card-title">{title}</h5>
+          <br />
+          <p className='card-text'>
+
+            <u>By {author} Dated: {date}</u>
+          </p>
+
+          <br />
+          <Link to={newsUrl} style={{ textDecoration: 'none', color: 'black', cursor: 'pointer' }}><p className="card-text">{desc}</p>
+            <br />
+            <b>Read Full News</b></Link>
+        </div>
+      </div>
+    )
+  }
+}
+
+export default NewzItem
