@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/newz-hunt/static/css/main.abd64e84.css",
+    "main.js": "/newz-hunt/static/js/main.93464419.js",
+    "static/js/787.ed16bc4c.chunk.js": "/newz-hunt/static/js/787.ed16bc4c.chunk.js",
+    "static/media/spin.gif": "/newz-hunt/static/media/spin.56ec7b0f514fa47b67e4.gif",
+    "index.html": "/newz-hunt/index.html",
+    "main.abd64e84.css.map": "/newz-hunt/static/css/main.abd64e84.css.map",
+    "main.93464419.js.map": "/newz-hunt/static/js/main.93464419.js.map",
+    "787.ed16bc4c.chunk.js.map": "/newz-hunt/static/js/787.ed16bc4c.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.abd64e84.css",
+    "static/js/main.93464419.js"
+  ]
+}
