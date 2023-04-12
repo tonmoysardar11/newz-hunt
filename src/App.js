@@ -8,7 +8,7 @@ import { HashRouter,Routes,Route } from 'react-router-dom';
 
 export default class App extends Component {
 static defaultProps ={
-  category: "general"
+  category: 'general'
 }
 
   render() {
