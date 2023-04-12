@@ -12,8 +12,7 @@ export class NewzItem extends Component {
     let { title, desc, imgUrl, newsUrl, date, author } = this.props;
     return (
       <div className="card my-2 mx-auto" style={{ width: '20rem' }}>
-        <span class="position-absolute top-0 translate-middle badge rounded-pill bg-success" style={{left
-        :'100%'}}>
+        <span class="d-flex justify-content-flex-end badge rounded-pill bg-success" style={{position:'absolute',right:0}}>
 {author}
   </span>
         <img src={imgUrl} className="card-img-top" style={{ height: '10em' }} alt="..." />

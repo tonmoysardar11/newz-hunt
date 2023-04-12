@@ -5,10 +5,17 @@ import React, { Component } from 'react'
 import Navbar from './components/Navbar';
 import News from './components/News';
 import { HashRouter,Routes,Route } from 'react-router-dom';
+import LoadingBar from 'react-top-loading-bar'
 
 export default class App extends Component {
 static defaultProps ={
   category: 'general'
+}
+state={
+  progress: 0
+}
+setProgress=(newProgress)=>{
+  this.setState({progress:newProgress})
 }
 
   render() {
@@ -16,13 +23,18 @@ static defaultProps ={
       <>
       <HashRouter>
         <Navbar/>
+        <LoadingBar
+        color='#f11946'
+        width='1vh'
+        progress={this.state.progress}
+      />
         <Routes>
-          <Route exact path='/' element={<News key='Sports' pagesize={9} category=''/>}/>
-          <Route exact path='/Business' element={<News key='Business' pagesize={9} category='Business'/>}/>
-          <Route exact path='/Entertainment' element={<News key='Entertainment' pagesize={9} category='Entertainment'/>}/>
-          <Route exact path='/Technology' element={<News key='Technology' pagesize={9} category='Technology'/>}/>
-          <Route exact path='/Sports' element={<News key='Sports' pagesize={9} category='Sports'/>}/>
-          <Route exact path='/Health' element={<News key='Health' pagesize={9} category='Health'/>}/>
+          <Route exact path='/' element={<News setProgress={this.setProgress}  key='Sports' pagesize={9} category='General'/>}/>
+          <Route exact path='/Business' element={<News setProgress={this.setProgress}  key='Business' pagesize={9} category='Business'/>}/>
+          <Route exact path='/Entertainment' element={<News setProgress={this.setProgress}  key='Entertainment' pagesize={9} category='Entertainment'/>}/>
+          <Route exact path='/Technology' element={<News setProgress={this.setProgress}  key='Technology' pagesize={9} category='Technology'/>}/>
+          <Route exact path='/Sports' element={<News setProgress={this.setProgress}  key='Sports' pagesize={9} category='Sports'/>}/>
+          <Route exact path='/Health' element={<News setProgress={this.setProgress}  key='Health' pagesize={9} category='Health'/>}/>
         </Routes>
        </HashRouter>
       </>
