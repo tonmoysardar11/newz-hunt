@@ -45,7 +45,10 @@ const fetchMoreData = async () => {
                 {loading && <Spinner />}
                 <InfiniteScroll
                     dataLength={articles.length}
-                    next={fetchMoreData()}
+                    next={useEffect(() => {
+                        fetchMoreData()
+                        // eslint-disable-next-line
+                    }, []) }
                     hasMore={articles.length !== totalResults}>
                     <div className="container">
                         <div className="container row mx-auto" >
